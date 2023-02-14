@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D41ED4BA299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */; };
+		D41ED4BC299B128700EC648C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4BB299B128700EC648C /* ContentView.swift */; };
+		D41ED4BE299B128A00EC648C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41ED4BD299B128A00EC648C /* Assets.xcassets */; };
+		D41ED4C1299B128A00EC648C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41ED4C0299B128A00EC648C /* Preview Assets.xcassets */; };
+		D41ED4CB299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4CA299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift */; };
+		D41ED4D5299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */; };
+		D41ED4D7299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D41ED4C7299B128A00EC648C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41ED4AE299B128700EC648C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41ED4B5299B128700EC648C;
+			remoteInfo = CoffeeChatThemeGenerator;
+		};
+		D41ED4D1299B128B00EC648C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41ED4AE299B128700EC648C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D41ED4B5299B128700EC648C;
+			remoteInfo = CoffeeChatThemeGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D41ED4B6299B128700EC648C /* CoffeeChatThemeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeChatThemeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorApp.swift; sourceTree = "<group>"; };
+		D41ED4BB299B128700EC648C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D41ED4BD299B128A00EC648C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D41ED4C0299B128A00EC648C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D41ED4C6299B128A00EC648C /* CoffeeChatThemeGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeChatThemeGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41ED4CA299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorTests.swift; sourceTree = "<group>"; };
+		D41ED4D0299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeChatThemeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITests.swift; sourceTree = "<group>"; };
+		D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D41ED4B3299B128700EC648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4C3299B128A00EC648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4CD299B128B00EC648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D41ED4AD299B128700EC648C = {
+			isa = PBXGroup;
+			children = (
+				D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */,
+				D41ED4C9299B128A00EC648C /* CoffeeChatThemeGeneratorTests */,
+				D41ED4D3299B128B00EC648C /* CoffeeChatThemeGeneratorUITests */,
+				D41ED4B7299B128700EC648C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D41ED4B7299B128700EC648C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4B6299B128700EC648C /* CoffeeChatThemeGenerator.app */,
+				D41ED4C6299B128A00EC648C /* CoffeeChatThemeGeneratorTests.xctest */,
+				D41ED4D0299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */,
+				D41ED4BB299B128700EC648C /* ContentView.swift */,
+				D41ED4BD299B128A00EC648C /* Assets.xcassets */,
+				D41ED4BF299B128A00EC648C /* Preview Content */,
+			);
+			path = CoffeeChatThemeGenerator;
+			sourceTree = "<group>";
+		};
+		D41ED4BF299B128A00EC648C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4C0299B128A00EC648C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D41ED4C9299B128A00EC648C /* CoffeeChatThemeGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4CA299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift */,
+			);
+			path = CoffeeChatThemeGeneratorTests;
+			sourceTree = "<group>";
+		};
+		D41ED4D3299B128B00EC648C /* CoffeeChatThemeGeneratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */,
+				D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */,
+			);
+			path = CoffeeChatThemeGeneratorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D41ED4B5299B128700EC648C /* CoffeeChatThemeGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41ED4DA299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGenerator" */;
+			buildPhases = (
+				D41ED4B2299B128700EC648C /* Sources */,
+				D41ED4B3299B128700EC648C /* Frameworks */,
+				D41ED4B4299B128700EC648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeChatThemeGenerator;
+			productName = CoffeeChatThemeGenerator;
+			productReference = D41ED4B6299B128700EC648C /* CoffeeChatThemeGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D41ED4C5299B128A00EC648C /* CoffeeChatThemeGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41ED4DD299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGeneratorTests" */;
+			buildPhases = (
+				D41ED4C2299B128A00EC648C /* Sources */,
+				D41ED4C3299B128A00EC648C /* Frameworks */,
+				D41ED4C4299B128A00EC648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41ED4C8299B128A00EC648C /* PBXTargetDependency */,
+			);
+			name = CoffeeChatThemeGeneratorTests;
+			productName = CoffeeChatThemeGeneratorTests;
+			productReference = D41ED4C6299B128A00EC648C /* CoffeeChatThemeGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D41ED4CF299B128B00EC648C /* CoffeeChatThemeGeneratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D41ED4E0299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGeneratorUITests" */;
+			buildPhases = (
+				D41ED4CC299B128B00EC648C /* Sources */,
+				D41ED4CD299B128B00EC648C /* Frameworks */,
+				D41ED4CE299B128B00EC648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41ED4D2299B128B00EC648C /* PBXTargetDependency */,
+			);
+			name = CoffeeChatThemeGeneratorUITests;
+			productName = CoffeeChatThemeGeneratorUITests;
+			productReference = D41ED4D0299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41ED4AE299B128700EC648C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D41ED4B5299B128700EC648C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D41ED4C5299B128A00EC648C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D41ED4B5299B128700EC648C;
+					};
+					D41ED4CF299B128B00EC648C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D41ED4B5299B128700EC648C;
+					};
+				};
+			};
+			buildConfigurationList = D41ED4B1299B128700EC648C /* Build configuration list for PBXProject "CoffeeChatThemeGenerator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D41ED4AD299B128700EC648C;
+			productRefGroup = D41ED4B7299B128700EC648C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D41ED4B5299B128700EC648C /* CoffeeChatThemeGenerator */,
+				D41ED4C5299B128A00EC648C /* CoffeeChatThemeGeneratorTests */,
+				D41ED4CF299B128B00EC648C /* CoffeeChatThemeGeneratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D41ED4B4299B128700EC648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41ED4C1299B128A00EC648C /* Preview Assets.xcassets in Resources */,
+				D41ED4BE299B128A00EC648C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4C4299B128A00EC648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4CE299B128B00EC648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D41ED4B2299B128700EC648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41ED4BC299B128700EC648C /* ContentView.swift in Sources */,
+				D41ED4BA299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4C2299B128A00EC648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41ED4CB299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D41ED4CC299B128B00EC648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D41ED4D7299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift in Sources */,
+				D41ED4D5299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D41ED4C8299B128A00EC648C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41ED4B5299B128700EC648C /* CoffeeChatThemeGenerator */;
+			targetProxy = D41ED4C7299B128A00EC648C /* PBXContainerItemProxy */;
+		};
+		D41ED4D2299B128B00EC648C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D41ED4B5299B128700EC648C /* CoffeeChatThemeGenerator */;
+			targetProxy = D41ED4D1299B128B00EC648C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D41ED4D8299B128B00EC648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D41ED4D9299B128B00EC648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D41ED4DB299B128B00EC648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeChatThemeGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D41ED4DC299B128B00EC648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeChatThemeGenerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGenerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D41ED4DE299B128B00EC648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeChatThemeGenerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeChatThemeGenerator";
+			};
+			name = Debug;
+		};
+		D41ED4DF299B128B00EC648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeChatThemeGenerator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoffeeChatThemeGenerator";
+			};
+			name = Release;
+		};
+		D41ED4E1299B128B00EC648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGeneratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeChatThemeGenerator;
+			};
+			name = Debug;
+		};
+		D41ED4E2299B128B00EC648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95L82PNXV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kamimi.CoffeeChatThemeGeneratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeChatThemeGenerator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D41ED4B1299B128700EC648C /* Build configuration list for PBXProject "CoffeeChatThemeGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41ED4D8299B128B00EC648C /* Debug */,
+				D41ED4D9299B128B00EC648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41ED4DA299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41ED4DB299B128B00EC648C /* Debug */,
+				D41ED4DC299B128B00EC648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41ED4DD299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41ED4DE299B128B00EC648C /* Debug */,
+				D41ED4DF299B128B00EC648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D41ED4E0299B128B00EC648C /* Build configuration list for PBXNativeTarget "CoffeeChatThemeGeneratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D41ED4E1299B128B00EC648C /* Debug */,
+				D41ED4E2299B128B00EC648C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41ED4AE299B128700EC648C /* Project object */;
+}

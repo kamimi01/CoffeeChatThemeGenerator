@@ -14,6 +14,18 @@
 		D41ED4CB299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4CA299B128A00EC648C /* CoffeeChatThemeGeneratorTests.swift */; };
 		D41ED4D5299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */; };
 		D41ED4D7299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */; };
+		D41ED4E5299B136600EC648C /* AppInfoList in Frameworks */ = {isa = PBXBuildFile; productRef = D41ED4E4299B136600EC648C /* AppInfoList */; };
+		D41ED4E8299C42B000EC648C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4E7299C42B000EC648C /* HTTPMethod.swift */; };
+		D41ED4EA299C42DF00EC648C /* OpenAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */; };
+		D41ED4EC299C439400EC648C /* OpenAIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4EB299C439400EC648C /* OpenAIClientError.swift */; };
+		D41ED4EE299C43C900EC648C /* OpenAIAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */; };
+		D41ED4F1299C447200EC648C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F0299C447200EC648C /* Theme.swift */; };
+		D41ED4F3299C44CC00EC648C /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */; };
+		D41ED4F5299C63C400EC648C /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */; };
+		D41ED4F7299CE77500EC648C /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F6299CE77500EC648C /* Secret.swift */; };
+		D41ED4F9299CE95F00EC648C /* PostCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F8299CE95F00EC648C /* PostCompletion.swift */; };
+		D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */; };
+		D41ED4FD299CEDEA00EC648C /* ThemeResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +56,17 @@
 		D41ED4D0299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeChatThemeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITests.swift; sourceTree = "<group>"; };
 		D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D41ED4E7299C42B000EC648C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIRequest.swift; sourceTree = "<group>"; };
+		D41ED4EB299C439400EC648C /* OpenAIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClientError.swift; sourceTree = "<group>"; };
+		D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPIError.swift; sourceTree = "<group>"; };
+		D41ED4F0299C447200EC648C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
+		D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
+		D41ED4F6299CE77500EC648C /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		D41ED4F8299CE95F00EC648C /* PostCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCompletion.swift; sourceTree = "<group>"; };
+		D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResponse.swift; sourceTree = "<group>"; };
+		D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41ED4E5299B136600EC648C /* AppInfoList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +118,14 @@
 		D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D41ED4EF299C445000EC648C /* Entity */,
+				D41ED4E6299C429D00EC648C /* APIClient */,
 				D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */,
 				D41ED4BB299B128700EC648C /* ContentView.swift */,
 				D41ED4BD299B128A00EC648C /* Assets.xcassets */,
 				D41ED4BF299B128A00EC648C /* Preview Content */,
+				D41ED4F6299CE77500EC648C /* Secret.swift */,
+				D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */,
 			);
 			path = CoffeeChatThemeGenerator;
 			sourceTree = "<group>";
@@ -127,6 +155,29 @@
 			path = CoffeeChatThemeGeneratorUITests;
 			sourceTree = "<group>";
 		};
+		D41ED4E6299C429D00EC648C /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4E7299C42B000EC648C /* HTTPMethod.swift */,
+				D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */,
+				D41ED4EB299C439400EC648C /* OpenAIClientError.swift */,
+				D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */,
+				D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */,
+				D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		D41ED4EF299C445000EC648C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4F0299C447200EC648C /* Theme.swift */,
+				D41ED4F8299CE95F00EC648C /* PostCompletion.swift */,
+				D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +194,9 @@
 			dependencies = (
 			);
 			name = CoffeeChatThemeGenerator;
+			packageProductDependencies = (
+				D41ED4E4299B136600EC648C /* AppInfoList */,
+			);
 			productName = CoffeeChatThemeGenerator;
 			productReference = D41ED4B6299B128700EC648C /* CoffeeChatThemeGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +269,9 @@
 				Base,
 			);
 			mainGroup = D41ED4AD299B128700EC648C;
+			packageReferences = (
+				D41ED4E3299B136600EC648C /* XCRemoteSwiftPackageReference "AppInfoList" */,
+			);
 			productRefGroup = D41ED4B7299B128700EC648C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */,
+				D41ED4F3299C44CC00EC648C /* OpenAIClient.swift in Sources */,
+				D41ED4F7299CE77500EC648C /* Secret.swift in Sources */,
+				D41ED4F5299C63C400EC648C /* OpenAIAPI.swift in Sources */,
 				D41ED4BC299B128700EC648C /* ContentView.swift in Sources */,
+				D41ED4EE299C43C900EC648C /* OpenAIAPIError.swift in Sources */,
 				D41ED4BA299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift in Sources */,
+				D41ED4E8299C42B000EC648C /* HTTPMethod.swift in Sources */,
+				D41ED4F9299CE95F00EC648C /* PostCompletion.swift in Sources */,
+				D41ED4EA299C42DF00EC648C /* OpenAIRequest.swift in Sources */,
+				D41ED4EC299C439400EC648C /* OpenAIClientError.swift in Sources */,
+				D41ED4F1299C447200EC648C /* Theme.swift in Sources */,
+				D41ED4FD299CEDEA00EC648C /* ThemeResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +651,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D41ED4E3299B136600EC648C /* XCRemoteSwiftPackageReference "AppInfoList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kamimi01/AppInfoList.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D41ED4E4299B136600EC648C /* AppInfoList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D41ED4E3299B136600EC648C /* XCRemoteSwiftPackageReference "AppInfoList" */;
+			productName = AppInfoList;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D41ED4AE299B128700EC648C /* Project object */;
 }

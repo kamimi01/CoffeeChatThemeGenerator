@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var viewModel = ThemeResultViewModel()
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                viewModel.onAppear()
+            }) {
+                Text("OpenAI Text Completion")
+            }
+            Text(viewModel.result ?? "")
         }
         .padding()
     }

@@ -26,6 +26,7 @@
 		D41ED4F9299CE95F00EC648C /* PostCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F8299CE95F00EC648C /* PostCompletion.swift */; };
 		D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */; };
 		D41ED4FD299CEDEA00EC648C /* ThemeResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */; };
+		D41ED500299DA9BC00EC648C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FF299DA9BC00EC648C /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D41ED4F8299CE95F00EC648C /* PostCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCompletion.swift; sourceTree = "<group>"; };
 		D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResponse.swift; sourceTree = "<group>"; };
 		D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultViewModel.swift; sourceTree = "<group>"; };
+		D41ED4FF299DA9BC00EC648C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D41ED4FE299DA9AF00EC648C /* Extension */,
 				D41ED4EF299C445000EC648C /* Entity */,
 				D41ED4E6299C429D00EC648C /* APIClient */,
 				D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */,
@@ -176,6 +179,14 @@
 				D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D41ED4FE299DA9AF00EC648C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED4FF299DA9BC00EC648C /* Color+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41ED500299DA9BC00EC648C /* Color+Extension.swift in Sources */,
 				D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */,
 				D41ED4F3299C44CC00EC648C /* OpenAIClient.swift in Sources */,
 				D41ED4F7299CE77500EC648C /* Secret.swift in Sources */,

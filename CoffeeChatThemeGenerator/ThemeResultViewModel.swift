@@ -10,7 +10,7 @@ import Foundation
 final class ThemeResultViewModel: ObservableObject {
     @Published var result: String?
 
-    func onAppear() {
+    func generateThemes() {
         let client = OpenAIClient()
         let request = OpenAIAPI.TextCompletion()
         

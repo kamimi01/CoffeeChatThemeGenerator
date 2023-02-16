@@ -9,21 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var viewModel = ThemeResultViewModel()
-    @State private var whenTextInput = ""
-    @State private var whereTextInput = ""
-    @State private var whoTextInput = ""
 
     var body: some View {
         ZStack {
             Color.mainBackground
                 .edgesIgnoringSafeArea(.all)
-            VStack(spacing: 30) {
-                whenTextField
-                whereTextField
-                whoTextField
-                submitButton
+            ScrollView {
+                VStack(spacing: 30) {
+                    whenTextField
+                    whereTextField
+                    whoTextField
+                    submitButton
+                    Text(viewModel.result ?? "")
+                }
+                .padding(40)
             }
-            .padding(40)
         }
     }
 }
@@ -31,7 +31,7 @@ struct ContentView: View {
 private extension ContentView {
     var whenTextField: some View {
         VStack {
-            TextField("夜", text: $whenTextInput)
+            TextField("夜", text: $viewModel.whenTextInput)
                 .padding()
                 .frame(height: 50, alignment: .top)
                 .background(Color.smokeWhite)
@@ -44,7 +44,7 @@ private extension ContentView {
 
     var whereTextField: some View {
         VStack {
-            TextField("東京のバー", text: $whereTextInput)
+            TextField("東京のバー", text: $viewModel.whereTextInput)
                 .padding()
                 .frame(height: 50, alignment: .top)
                 .background(Color.smokeWhite)
@@ -57,7 +57,7 @@ private extension ContentView {
 
     var whoTextField: some View {
         VStack {
-            TextField("昔から仲のいい友人", text: $whoTextInput)
+            TextField("仲のいい友人", text: $viewModel.whoTextInput)
                 .padding()
                 .frame(height: 50, alignment: .top)
                 .background(Color.smokeWhite)

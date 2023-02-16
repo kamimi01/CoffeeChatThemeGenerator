@@ -125,10 +125,10 @@
 				D41ED4E6299C429D00EC648C /* APIClient */,
 				D41ED4B9299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift */,
 				D41ED4BB299B128700EC648C /* ContentView.swift */,
+				D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */,
 				D41ED4BD299B128A00EC648C /* Assets.xcassets */,
 				D41ED4BF299B128A00EC648C /* Preview Content */,
 				D41ED4F6299CE77500EC648C /* Secret.swift */,
-				D41ED4FC299CEDEA00EC648C /* ThemeResultViewModel.swift */,
 			);
 			path = CoffeeChatThemeGenerator;
 			sourceTree = "<group>";

@@ -72,9 +72,12 @@ private extension ContentView {
         Button(action: {
             viewModel.generateThemes()
         }) {
-            Text("話したい時にベストなテーマは？")
+            Text("話す時にベストなテーマは？")
                 .foregroundColor(.smokeBlack)
+                .bold()
+                .font(.title3)
                 .padding()
+                .frame(maxWidth: .infinity)
                 .frame(height: 50, alignment: .top)
                 .background(Color.smokeWhite)
                 .cornerRadius(20)

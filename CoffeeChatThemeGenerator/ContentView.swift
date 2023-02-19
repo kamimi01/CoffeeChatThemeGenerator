@@ -15,17 +15,28 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color.mainBackground
+            Color.smokeWhite
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                VStack(spacing: 30) {
-                    whenTextField
-                    whereTextField
-                    whoTextField
-                    submitButton
-                    Text(viewModel.result ?? "")
+            ZStack {
+                VStack {
+                    Spacer()
+                        .frame(height: 200)
+                    Color.mainBackground
+                        .edgesIgnoringSafeArea(.all)
                 }
-                .padding(40)
+                ScrollView {
+                    VStack(spacing: 25) {
+                        // TODO: 画像がアニメーションを入れる
+                        LottieView(animationType: .friends)
+                            .frame(height: 200)
+                        whenTextField
+                        whereTextField
+                        whoTextField
+                        submitButton
+                        Text(viewModel.result ?? "")
+                    }
+                    .padding(40)
+                }
             }
         }
     }

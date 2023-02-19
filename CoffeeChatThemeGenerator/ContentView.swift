@@ -12,36 +12,58 @@ struct ContentView: View {
     @FocusState private var isFocusedWhen: Bool
     @FocusState private var isFocusedWhere: Bool
     @FocusState private var isFocusedWho: Bool
+    @State private var isShowingResult = false
 
     var body: some View {
-        ZStack {
-            Color.smokeWhite
-                .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                ZStack {
-                    VStack {
-                        Spacer()
-                            .frame(height: 200)
-                        Color.mainBackground
-                            .edgesIgnoringSafeArea(.all)
-                            .onTapGesture {
-                                isFocusedWhen = false
-                                isFocusedWhere = false
-                                isFocusedWho = false
+        NavigationView {
+            ZStack {
+                Color.smokeWhite
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    ZStack {
+                        VStack {
+                            Spacer()
+                                .frame(height: 220)
+                            Color.mainBackground
+                                .edgesIgnoringSafeArea(.all)
+                                .onTapGesture {
+                                    isFocusedWhen = false
+                                    isFocusedWhere = false
+                                    isFocusedWho = false
+                                }
+                        }
+                        VStack(spacing: 0) {
+                            LottieView(animationType: .friends)
+                                .frame(height: 240)
+                            VStack(spacing: 45) {
+                                VStack(spacing: 25) {
+                                    whenTextField
+                                    whereTextField
+                                    whoTextField
+                                }
+                                VStack {
+                                    NavigationLink(
+                                        destination: ThemeResultScreen(theme: viewModel.result ?? "結果なし"),
+                                        isActive: $isShowingResult
+                                    ) {
+                                        EmptyView()
+                                    }
+                                    submitButton
+                                }
+                                .onChange(of: viewModel.result) { _ in
+                                    if let result = viewModel.result {
+                                        if !result.isEmpty {
+                                            isShowingResult = true
+                                        }
+                                    }
+                                }
                             }
+                        }
+                        .padding(40)
                     }
-                    VStack(spacing: 25) {
-                        LottieView(animationType: .friends)
-                            .frame(height: 200)
-                        whenTextField
-                        whereTextField
-                        whoTextField
-                        submitButton
-                        Spacer()
-                    }
-                    .padding(40)
                 }
             }
+            .navigationBarHidden(true)
         }
     }
 }

@@ -14,6 +14,7 @@ final class ThemeResultViewModel: ObservableObject {
     @Published var whereTextInput = ""
     @Published var whoTextInput = ""
     @Published var loading = false
+    @Published var isShowingAlert = false
 
     func generateThemes() {
         loading = true
@@ -34,14 +35,31 @@ final class ThemeResultViewModel: ObservableObject {
             case let .success(response):
                 DispatchQueue.main.async {
                     self.loading = false
-                    self.result = response.choices.first?.text
+                    self.result = self.modifyThemeText(response.choices.first?.text)
                 }
             case let .failure(error):
                 DispatchQueue.main.async {
                     self.loading = false
-                    self.errorMessage = error.localizedDescription
+                    switch error {
+                    case .connectionError(_):
+                        self.errorMessage = "ネットワーク接続に問題があります。"
+                    case .responseParseError(_):
+                        self.errorMessage = "予期しないエラーが発生しました"
+                    case .apiError(let error):
+                        self.errorMessage = error.error.message
+                    }
+                    self.isShowingAlert = true
                 }
             }
         }
+    }
+
+    private func modifyThemeText(_ theme: String?) -> String? {
+        guard var theme = theme else { return nil }
+        // なぜか最初に改行文字が入っている場合があるので、取り除く
+        if theme.prefix(2) == "\n" {
+            return nil
+        }
+        return theme
     }
 }

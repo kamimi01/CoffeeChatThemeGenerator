@@ -25,7 +25,7 @@ struct ThemeResultScreen: View {
                     VStack(spacing: 0) {
                         LottieView(animationType: .friends)
                             .frame(height: 240)
-                        VStack(alignment: .leading, spacing: 20) {
+                        VStack(alignment: .leading, spacing: 10) {
                             Text("こんなテーマはいかがですか？")
                                 .font(.title)
                                 .foregroundColor(.smokeBlack)

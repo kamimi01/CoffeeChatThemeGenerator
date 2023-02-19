@@ -16,10 +16,10 @@ struct ContentView: View {
     @State private var isShowingAppInfoScreen = false
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.smokeWhite
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            Color.smokeWhite
+                .edgesIgnoringSafeArea(.all)
+            NavigationView {
                 ScrollView {
                     ZStack {
                         VStack {
@@ -64,23 +64,12 @@ struct ContentView: View {
                         .padding(40)
                     }
                 }
-                if viewModel.loading {
-                    Color.black.opacity(0.5)
-                        .edgesIgnoringSafeArea(.all)
-                    ProgressView()
-                        .scaleEffect(x: 2, y: 2, anchor: .center)
-                        .padding(.all, 24)
-                        .background(Color.gray)
-                        .progressViewStyle(CircularProgressViewStyle(tint: Color.mainBackground))
-                        .cornerRadius(16)
-                        .opacity(0.6)
-                }
-            }
-            .navigationTitle("テーマをつくる")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing){
-                    appInfoButton
+                .navigationTitle("テーマをつくる")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        appInfoButton
+                    }
                 }
             }
             .onChange(of: viewModel.loading) { loading in
@@ -89,6 +78,17 @@ struct ContentView: View {
                     isFocusedWhere = false
                     isFocusedWho = false
                 }
+            }
+            if viewModel.loading {
+                Color.black.opacity(0.5)
+                    .edgesIgnoringSafeArea(.all)
+                ProgressView()
+                    .scaleEffect(x: 2, y: 2, anchor: .center)
+                    .padding(.all, 24)
+                    .background(Color.gray)
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.mainBackground))
+                    .cornerRadius(16)
+                    .opacity(0.6)
             }
         }
         .accentColor(.smokeBlack)

@@ -13,6 +13,7 @@ struct ContentView: View {
     @FocusState private var isFocusedWhere: Bool
     @FocusState private var isFocusedWho: Bool
     @State private var isShowingResult = false
+    @State private var isShowingAppInfoScreen = false
 
     var body: some View {
         NavigationView {
@@ -49,6 +50,7 @@ struct ContentView: View {
                                         EmptyView()
                                     }
                                     submitButton
+                                        .padding(.bottom, 50)
                                 }
                                 .onChange(of: viewModel.result) { _ in
                                     if let result = viewModel.result {
@@ -74,7 +76,11 @@ struct ContentView: View {
                         .opacity(0.6)
                 }
             }
-            .navigationBarHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing){
+                    appInfoButton
+                }
+            }
             .onChange(of: viewModel.loading) { loading in
                 if loading {
                     isFocusedWhen = false
@@ -223,6 +229,18 @@ private extension ContentView {
                 .cornerRadius(30)
         }
         .shadow(color: .smokeBlack, radius: 2, x: 0, y: 2)
+    }
+
+    var appInfoButton: some View {
+        Button(action: {
+            isShowingAppInfoScreen = true
+        }) {
+            Image(systemName: "info.circle")
+                .foregroundColor(.smokeBlack)
+        }
+        .fullScreenCover(isPresented: $isShowingAppInfoScreen) {
+            SettingScreen()
+        }
     }
 }
 

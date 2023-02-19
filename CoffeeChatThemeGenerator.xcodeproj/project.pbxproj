@@ -31,6 +31,8 @@
 		D41ED50429A1D4A700EC648C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED50329A1D4A700EC648C /* LottieView.swift */; };
 		D41ED50729A1D50500EC648C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D41ED50629A1D50500EC648C /* Lottie */; };
 		D41ED50A29A1E0C000EC648C /* ThemeResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED50929A1E0C000EC648C /* ThemeResultScreen.swift */; };
+		D41ED50D29A1F3AB00EC648C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */; };
+		D41ED50F29A1F51300EC648C /* license-list.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41ED50E29A1F51300EC648C /* license-list.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		D41ED50129A1D47400EC648C /* friends.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friends.json; sourceTree = "<group>"; };
 		D41ED50329A1D4A700EC648C /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D41ED50929A1E0C000EC648C /* ThemeResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultScreen.swift; sourceTree = "<group>"; };
+		D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
+		D41ED50E29A1F51300EC648C /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 		D41ED4AD299B128700EC648C = {
 			isa = PBXGroup;
 			children = (
+				D41ED50E29A1F51300EC648C /* license-list.plist */,
 				D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */,
 				D41ED4C9299B128A00EC648C /* CoffeeChatThemeGeneratorTests */,
 				D41ED4D3299B128B00EC648C /* CoffeeChatThemeGeneratorUITests */,
@@ -128,6 +133,7 @@
 		D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D41ED50B29A1F39F00EC648C /* Setting */,
 				D41ED50829A1E0AC00EC648C /* ThemeResult */,
 				D41ED4FE299DA9AF00EC648C /* Extension */,
 				D41ED4EF299C445000EC648C /* Entity */,
@@ -208,6 +214,14 @@
 			path = ThemeResult;
 			sourceTree = "<group>";
 		};
+		D41ED50B29A1F39F00EC648C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +232,7 @@
 				D41ED4B2299B128700EC648C /* Sources */,
 				D41ED4B3299B128700EC648C /* Frameworks */,
 				D41ED4B4299B128700EC648C /* Resources */,
+				D41ED51029A1F51D00EC648C /* LiseceList */,
 			);
 			buildRules = (
 			);
@@ -320,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41ED50F29A1F51300EC648C /* license-list.plist in Resources */,
 				D41ED4C1299B128A00EC648C /* Preview Assets.xcassets in Resources */,
 				D41ED4BE299B128A00EC648C /* Assets.xcassets in Resources */,
 				D41ED50229A1D47400EC648C /* friends.json in Resources */,
@@ -342,6 +358,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D41ED51029A1F51D00EC648C /* LiseceList */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LiseceList;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SOURCE_PACKAGES_PATH=`echo ${BUILD_DIR%Build/*}SourcePackages`\n\n# Build SourcePackagesParser\nxcrun --sdk macosx swift build -c release \\\n  --package-path ${SOURCE_PACKAGES_PATH}/checkouts/LicenseList \\\n  --product spp\n\n# Run SourcePackagesParser\n${SOURCE_PACKAGES_PATH}/checkouts/LicenseList/.build/release/spp ${SRCROOT} ${SOURCE_PACKAGES_PATH}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D41ED4B2299B128700EC648C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -355,6 +392,7 @@
 				D41ED4F7299CE77500EC648C /* Secret.swift in Sources */,
 				D41ED4F5299C63C400EC648C /* OpenAIAPI.swift in Sources */,
 				D41ED4BC299B128700EC648C /* ContentView.swift in Sources */,
+				D41ED50D29A1F3AB00EC648C /* SettingScreen.swift in Sources */,
 				D41ED4EE299C43C900EC648C /* OpenAIAPIError.swift in Sources */,
 				D41ED4BA299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift in Sources */,
 				D41ED4E8299C42B000EC648C /* HTTPMethod.swift in Sources */,

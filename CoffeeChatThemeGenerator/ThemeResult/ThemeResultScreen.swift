@@ -11,19 +11,22 @@ struct ThemeResultScreen: View {
     let theme: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Text("こんなテーマで話しましょう")
-                .font(.title2)
-                .foregroundColor(.smokeBlack)
-                .bold()
-            Text(theme)
-                .font(.title3)
-                .foregroundColor(.smokeBlack)
-        }
-        .padding(.horizontal, 16)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                shareButton
+        ZStack {
+            Color.mainBackground
+                .edgesIgnoringSafeArea(.all)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("こんなテーマで話しましょう")
+                        .font(.title)
+                        .foregroundColor(.smokeWhite)
+                        .bold()
+                    Text(theme)
+                        .font(.title2)
+                        .foregroundColor(.smokeWhite)
+                    Spacer()
+                    shareButton
+                }
+                .padding(.horizontal, 16)
             }
         }
     }
@@ -32,9 +35,17 @@ struct ThemeResultScreen: View {
 private extension ThemeResultScreen {
     var shareButton: some View {
         ShareLink(item: sharedText) {
-            Image(systemName: "square.and.arrow.up")
+            Text("結果を共有する")
+                .foregroundColor(.smokeWhite)
+                .bold()
+                .font(.title3)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .frame(height: 60, alignment: .top)
+                .background(Color.mainBackground)
+                .cornerRadius(30)
         }
-        .foregroundColor(.smokeBlack)
+        .shadow(color: .smokeBlack, radius: 2, x: 0, y: 2)
     }
 
     var sharedText: String {

@@ -133,7 +133,7 @@ private extension ContentView {
         HStack(spacing: 10) {
             Color.clear
                 .frame(width: 25, height: 25)
-            Text("例）夜")
+            Text("例）お昼")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)
             Spacer()
@@ -179,7 +179,7 @@ private extension ContentView {
         HStack(spacing: 10) {
             Color.clear
                 .frame(width: 25, height: 25)
-            Text("例）東京のバー")
+            Text("例）カフェ")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)
             Spacer()
@@ -225,7 +225,7 @@ private extension ContentView {
         HStack(spacing: 10) {
             Color.clear
                 .frame(width: 25, height: 25)
-            Text("例）仲のいい友達")
+            Text("例）友達")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)
             Spacer()

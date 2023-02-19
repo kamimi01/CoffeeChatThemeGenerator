@@ -10,6 +10,7 @@ import Lottie
 
 enum AnimationType: String {
     case friends = "friends"
+    case loading = "loading"
 }
 
 struct LottieView: UIViewRepresentable {

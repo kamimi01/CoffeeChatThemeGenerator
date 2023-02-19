@@ -12,8 +12,11 @@ final class ThemeResultViewModel: ObservableObject {
     @Published var whenTextInput = ""
     @Published var whereTextInput = ""
     @Published var whoTextInput = ""
+    @Published var loading = false
 
     func generateThemes() {
+        loading = true
+
         let client = OpenAIClient()
         var request = OpenAIAPI.TextCompletion()
         var prompt: String {
@@ -29,10 +32,12 @@ final class ThemeResultViewModel: ObservableObject {
             switch result {
             case let .success(response):
                 DispatchQueue.main.async {
+                    self.loading = false
                     self.result = response.choices.first?.text
                 }
             case let .failure(error):
                 DispatchQueue.main.async {
+                    self.loading = false
                     self.result = error.localizedDescription
                 }
             }

@@ -62,6 +62,17 @@ struct ContentView: View {
                         .padding(40)
                     }
                 }
+                if viewModel.loading {
+                    Color.black.opacity(0.5)
+                        .edgesIgnoringSafeArea(.all)
+                    ProgressView()
+                        .scaleEffect(x: 2, y: 2, anchor: .center)
+                        .padding(.all, 24)
+                        .background(Color.gray)
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.mainBackground))
+                        .cornerRadius(16)
+                        .opacity(0.6)
+                }
             }
             .navigationBarHidden(true)
         }

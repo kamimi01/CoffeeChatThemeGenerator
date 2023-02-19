@@ -75,6 +75,13 @@ struct ContentView: View {
                 }
             }
             .navigationBarHidden(true)
+            .onChange(of: viewModel.loading) { loading in
+                if loading {
+                    isFocusedWhen = false
+                    isFocusedWhere = false
+                    isFocusedWho = false
+                }
+            }
         }
     }
 }

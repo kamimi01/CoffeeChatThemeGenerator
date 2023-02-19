@@ -76,6 +76,8 @@ struct ContentView: View {
                         .opacity(0.6)
                 }
             }
+            .navigationTitle("テーマをつくる")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing){
                     appInfoButton
@@ -89,12 +91,11 @@ struct ContentView: View {
                 }
             }
         }
+        .accentColor(.smokeBlack)
     }
 }
 
 private extension ContentView {
-    // image/viewModel.input/isFocused/text
-
     var whenTextField: some View {
         VStack {
             ZStack(alignment: .center) {
@@ -105,9 +106,6 @@ private extension ContentView {
                         .foregroundColor(.placeholderIcon)
                     TextField("", text: $viewModel.whenTextInput)
                         .focused($isFocusedWhen)
-                        .onTapGesture {
-                            isFocusedWhen = true
-                        }
                         .frame(height: 57)
                 }
                 .padding(.horizontal, 16)
@@ -121,6 +119,9 @@ private extension ContentView {
             .frame(height: 57, alignment: .top)
             .background(Color.smokeWhite)
             .cornerRadius(30)
+            .onTapGesture {
+                isFocusedWhen = true
+            }
             .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
             Text("に")
                 .font(.title2)
@@ -144,23 +145,30 @@ private extension ContentView {
     var whereTextField: some View {
         VStack {
             ZStack {
-                TextField("", text: $viewModel.whereTextInput)
-                    .padding()
-                    .foregroundColor(.smokeBlack)
-                    .accentColor(.mainBackground)
-                    .font(.system(size: 18))
-                    .frame(height: 57, alignment: .top)
-                    .background(Color.smokeWhite)
-                    .cornerRadius(30)
-                    .focused($isFocusedWhere)
-                    .onTapGesture {
-                        isFocusedWhere = true
-                    }
-                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
+                HStack(spacing: 10) {
+                    Image(systemName: "location.north.fill")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.placeholderIcon)
+                    TextField("", text: $viewModel.whereTextInput)
+                        .focused($isFocusedWhere)
+                        .frame(height: 57)
+                }
+                .padding(.horizontal, 16)
                 if viewModel.whereTextInput.isEmpty {
                     whereTextFieldPlaceHolder
                 }
             }
+            .foregroundColor(.smokeBlack)
+            .accentColor(.mainBackground)
+            .font(.system(size: 18))
+            .frame(height: 57, alignment: .top)
+            .background(Color.smokeWhite)
+            .cornerRadius(30)
+            .onTapGesture {
+                isFocusedWhere = true
+            }
+            .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
             Text("で")
                 .font(.title2)
                 .foregroundColor(.smokeWhite)
@@ -169,10 +177,8 @@ private extension ContentView {
 
     var whereTextFieldPlaceHolder: some View {
         HStack(spacing: 10) {
-            Image(systemName: "location.north.fill")
-                .resizable()
+            Color.clear
                 .frame(width: 25, height: 25)
-                .foregroundColor(.placeholderIcon)
             Text("例）東京のバー")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)
@@ -185,24 +191,30 @@ private extension ContentView {
     var whoTextField: some View {
         VStack {
             ZStack {
-                TextField("", text: $viewModel.whoTextInput)
-                    .padding()
-                    .foregroundColor(.smokeBlack)
-                    .accentColor(.mainBackground)
-                    .font(.system(size: 18))
-                    .frame(height: 57, alignment: .top)
-                    .background(Color.smokeWhite)
-                    .cornerRadius(30)
-                    .focused($isFocusedWho)
-                    .onTapGesture {
-                        isFocusedWho = true
-                    }
-                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
-                if viewModel.whoTextInput.isEmpty
-                {
+                HStack(spacing: 10) {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.placeholderIcon)
+                    TextField("", text: $viewModel.whoTextInput)
+                        .focused($isFocusedWho)
+                        .frame(height: 57)
+                }
+                .padding(.horizontal, 16)
+                if viewModel.whoTextInput.isEmpty {
                     whoTextFieldPlaceHolder
                 }
             }
+            .foregroundColor(.smokeBlack)
+            .accentColor(.mainBackground)
+            .font(.system(size: 18))
+            .frame(height: 57, alignment: .top)
+            .background(Color.smokeWhite)
+            .cornerRadius(30)
+            .onTapGesture {
+                isFocusedWho = true
+            }
+            .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
             Text("と")
                 .font(.title2)
                 .foregroundColor(.smokeWhite)
@@ -211,10 +223,8 @@ private extension ContentView {
 
     var whoTextFieldPlaceHolder: some View {
         HStack(spacing: 10) {
-            Image(systemName: "person")
-                .resizable()
+            Color.clear
                 .frame(width: 25, height: 25)
-                .foregroundColor(.placeholderIcon)
             Text("例）仲のいい友達")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)

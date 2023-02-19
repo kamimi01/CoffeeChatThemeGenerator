@@ -20,55 +20,58 @@ struct ContentView: View {
             Color.smokeWhite
                 .edgesIgnoringSafeArea(.all)
             NavigationView {
-                ScrollView {
-                    ZStack {
-                        VStack {
-                            Spacer()
-                                .frame(height: 220)
-                            Color.mainBackground
-                                .edgesIgnoringSafeArea(.all)
-                                .onTapGesture {
-                                    isFocusedWhen = false
-                                    isFocusedWhere = false
-                                    isFocusedWho = false
-                                }
-                        }
-                        VStack(spacing: 0) {
-                            LottieView(animationType: .friends)
-                                .frame(height: 240)
-                            VStack(spacing: 45) {
-                                VStack(spacing: 25) {
-                                    whenTextField
-                                    whereTextField
-                                    whoTextField
-                                }
-                                VStack {
-                                    NavigationLink(
-                                        destination: ThemeResultScreen(theme: viewModel.result ?? "結果なし"),
-                                        isActive: $isShowingResult
-                                    ) {
-                                        EmptyView()
+                ScrollViewReader { reader in
+                    ScrollView {
+                        ZStack {
+                            VStack {
+                                Spacer()
+                                    .frame(height: 220)
+                                    .id("screen_top")
+                                Color.mainBackground
+                                    .edgesIgnoringSafeArea(.all)
+                                    .onTapGesture {
+                                        isFocusedWhen = false
+                                        isFocusedWhere = false
+                                        isFocusedWho = false
                                     }
-                                    submitButton
-                                        .padding(.bottom, 50)
-                                }
-                                .onChange(of: viewModel.result) { _ in
-                                    if let result = viewModel.result {
-                                        if !result.isEmpty {
-                                            isShowingResult = true
+                            }
+                            VStack(spacing: 0) {
+                                LottieView(animationType: .friends)
+                                    .frame(height: 240)
+                                VStack(spacing: 45) {
+                                    VStack(spacing: 25) {
+                                        whenTextField
+                                        whereTextField
+                                        whoTextField
+                                    }
+                                    VStack {
+                                        NavigationLink(
+                                            destination: ThemeResultScreen(theme: viewModel.result ?? "結果なし"),
+                                            isActive: $isShowingResult
+                                        ) {
+                                            EmptyView()
+                                        }
+                                        submitButton(proxy: reader)
+                                            .padding(.bottom, 50)
+                                    }
+                                    .onChange(of: viewModel.result) { _ in
+                                        if let result = viewModel.result {
+                                            if !result.isEmpty {
+                                                isShowingResult = true
+                                            }
                                         }
                                     }
                                 }
                             }
+                            .padding(40)
                         }
-                        .padding(40)
                     }
-                }
-                .navigationTitle("テーマをつくる")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        appInfoButton
+                    .navigationTitle("テーマをつくる")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing){
+                            appInfoButton
+                        }
                     }
                 }
             }
@@ -234,9 +237,10 @@ private extension ContentView {
         .padding([.leading], 5)
     }
 
-    var submitButton: some View {
+    func submitButton(proxy: ScrollViewProxy) -> some View {
         Button(action: {
             viewModel.generateThemes()
+            proxy.scrollTo("screen_top")
         }) {
             Text("話すときのテーマは？")
                 .foregroundColor(.smokeWhite)

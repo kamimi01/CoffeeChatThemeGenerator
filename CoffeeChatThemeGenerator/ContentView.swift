@@ -17,25 +17,31 @@ struct ContentView: View {
         ZStack {
             Color.smokeWhite
                 .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                ZStack {
-                    VStack {
-                        Spacer()
-                            .frame(height: 200)
-                        Color.mainBackground
-                            .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 0) {
+                ScrollView {
+                    ZStack {
+                        VStack {
+                            Spacer()
+                                .frame(height: 200)
+                            Color.mainBackground
+                                .edgesIgnoringSafeArea(.all)
+                        }
+                        VStack(spacing: 25) {
+                            LottieView(animationType: .friends)
+                                .frame(height: 200)
+                                .border(Color.red)
+                            whenTextField
+                            whereTextField
+                            whoTextField
+                            submitButton
+                            Text(viewModel.result ?? "")
+                        }
+                        .padding(40)
                     }
-                    VStack(spacing: 25) {
-                        LottieView(animationType: .friends)
-                            .frame(height: 200)
-                        whenTextField
-                        whereTextField
-                        whoTextField
-                        submitButton
-                        Text(viewModel.result ?? "")
-                    }
-                    .padding(40)
                 }
+                Color.mainBackground
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(height: 10)
             }
         }
     }
@@ -54,6 +60,7 @@ private extension ContentView {
                     .onTapGesture {
                         isFocusedWhen = true
                     }
+                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
                 if viewModel.whenTextInput.isEmpty {
                     whenTextFieldPlaceHolder
                 }
@@ -89,6 +96,7 @@ private extension ContentView {
                     .onTapGesture {
                         isFocusedWhere = true
                     }
+                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
                 if viewModel.whereTextInput.isEmpty {
                     whereTextFieldPlaceHolder
                 }
@@ -124,6 +132,7 @@ private extension ContentView {
                     .onTapGesture {
                         isFocusedWho = true
                     }
+                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
                 if viewModel.whoTextInput.isEmpty
                 {
                     whoTextFieldPlaceHolder
@@ -152,7 +161,7 @@ private extension ContentView {
         Button(action: {
             viewModel.generateThemes()
         }) {
-            Text("話す時にベストなテーマは？")
+            Text("話す時に良いテーマは？")
                 .foregroundColor(.smokeWhite)
                 .bold()
                 .font(.title3)
@@ -162,7 +171,7 @@ private extension ContentView {
                 .background(Color.mainBackground)
                 .cornerRadius(30)
         }
-        .shadow(color: .gray, radius: 2, x: 0, y: 3)
+        .shadow(color: .smokeBlack, radius: 2, x: 0, y: 2)
     }
 }
 

@@ -17,16 +17,15 @@ struct ContentView: View {
         ZStack {
             Color.smokeWhite
                 .edgesIgnoringSafeArea(.all)
-            ZStack {
-                VStack {
-                    Spacer()
-                        .frame(height: 200)
-                    Color.mainBackground
-                        .edgesIgnoringSafeArea(.all)
-                }
-                ScrollView {
+            ScrollView {
+                ZStack {
+                    VStack {
+                        Spacer()
+                            .frame(height: 200)
+                        Color.mainBackground
+                            .edgesIgnoringSafeArea(.all)
+                    }
                     VStack(spacing: 25) {
-                        // TODO: 画像がアニメーションを入れる
                         LottieView(animationType: .friends)
                             .frame(height: 200)
                         whenTextField

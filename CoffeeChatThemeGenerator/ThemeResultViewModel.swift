@@ -55,10 +55,10 @@ final class ThemeResultViewModel: ObservableObject {
     }
 
     private func modifyThemeText(_ theme: String?) -> String? {
-        guard var theme = theme else { return nil }
+        guard let theme = theme else { return nil }
         // なぜか最初に改行文字が入っている場合があるので、取り除く
-        if theme.prefix(2) == "\n" {
-            return nil
+        if theme.contains("\n\n") {
+            return theme.replacingOccurrences(of: "\n\n", with: "\n")
         }
         return theme
     }

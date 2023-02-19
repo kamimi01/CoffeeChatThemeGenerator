@@ -93,26 +93,35 @@ struct ContentView: View {
 }
 
 private extension ContentView {
+    // image/viewModel.input/isFocused/text
+
     var whenTextField: some View {
         VStack {
-            ZStack {
-                TextField("", text: $viewModel.whenTextInput)
-                    .padding()
-                    .foregroundColor(.smokeBlack)
-                    .accentColor(.mainBackground)
-                    .font(.system(size: 18))
-                    .frame(height: 57, alignment: .top)
-                    .background(Color.smokeWhite)
-                    .cornerRadius(30)
-                    .focused($isFocusedWhen)
-                    .onTapGesture {
-                        isFocusedWhen = true
-                    }
-                    .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
+            ZStack(alignment: .center) {
+                HStack(spacing: 10) {
+                    Image(systemName: "timer")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.placeholderIcon)
+                    TextField("", text: $viewModel.whenTextInput)
+                        .focused($isFocusedWhen)
+                        .onTapGesture {
+                            isFocusedWhen = true
+                        }
+                        .frame(height: 57)
+                }
+                .padding(.horizontal, 16)
                 if viewModel.whenTextInput.isEmpty {
                     whenTextFieldPlaceHolder
                 }
             }
+            .foregroundColor(.smokeBlack)
+            .accentColor(.mainBackground)
+            .font(.system(size: 18))
+            .frame(height: 57, alignment: .top)
+            .background(Color.smokeWhite)
+            .cornerRadius(30)
+            .shadow(color: .smokeBlack, radius: 2, x: 0, y: 1)
             Text("に")
                 .font(.title2)
                 .foregroundColor(.smokeWhite)
@@ -121,10 +130,8 @@ private extension ContentView {
 
     var whenTextFieldPlaceHolder: some View {
         HStack(spacing: 10) {
-            Image(systemName: "timer")
-                .resizable()
+            Color.clear
                 .frame(width: 25, height: 25)
-                .foregroundColor(.placeholderIcon)
             Text("例）夜")
                 .font(.system(size: 18))
                 .foregroundColor(.gray)

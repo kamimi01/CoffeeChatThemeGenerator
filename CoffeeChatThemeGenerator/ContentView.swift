@@ -17,31 +17,30 @@ struct ContentView: View {
         ZStack {
             Color.smokeWhite
                 .edgesIgnoringSafeArea(.all)
-            VStack(spacing: 0) {
-                ScrollView {
-                    ZStack {
-                        VStack {
-                            Spacer()
-                                .frame(height: 200)
-                            Color.mainBackground
-                                .edgesIgnoringSafeArea(.all)
-                        }
-                        VStack(spacing: 25) {
-                            LottieView(animationType: .friends)
-                                .frame(height: 200)
-                                .border(Color.red)
-                            whenTextField
-                            whereTextField
-                            whoTextField
-                            submitButton
-                            Text(viewModel.result ?? "")
-                        }
-                        .padding(40)
+            ScrollView {
+                ZStack {
+                    VStack {
+                        Spacer()
+                            .frame(height: 200)
+                        Color.mainBackground
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                isFocusedWhen = false
+                                isFocusedWhere = false
+                                isFocusedWho = false
+                            }
                     }
+                    VStack(spacing: 25) {
+                        LottieView(animationType: .friends)
+                            .frame(height: 200)
+                        whenTextField
+                        whereTextField
+                        whoTextField
+                        submitButton
+                        Spacer()
+                    }
+                    .padding(40)
                 }
-                Color.mainBackground
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(height: 10)
             }
         }
     }
@@ -51,8 +50,11 @@ private extension ContentView {
     var whenTextField: some View {
         VStack {
             ZStack {
-                TextField("", text: $viewModel.whenTextInput)
+                TextField("", text: $viewModel.whenTextInput, axis: .vertical)
                     .padding()
+                    .foregroundColor(.smokeBlack)
+                    .accentColor(.mainBackground)
+                    .font(.system(size: 18))
                     .frame(height: 60, alignment: .top)
                     .background(Color.smokeWhite)
                     .cornerRadius(30)
@@ -77,6 +79,7 @@ private extension ContentView {
                 .resizable()
                 .frame(width: 25, height: 25)
             Text("例）夜")
+                .font(.system(size: 18))
             Spacer()
         }
         .foregroundColor(.gray)
@@ -87,8 +90,11 @@ private extension ContentView {
     var whereTextField: some View {
         VStack {
             ZStack {
-                TextField("", text: $viewModel.whereTextInput)
+                TextField("", text: $viewModel.whereTextInput, axis: .vertical)
                     .padding()
+                    .foregroundColor(.smokeBlack)
+                    .accentColor(.mainBackground)
+                    .font(.system(size: 18))
                     .frame(height: 60, alignment: .top)
                     .background(Color.smokeWhite)
                     .cornerRadius(30)
@@ -113,6 +119,7 @@ private extension ContentView {
                 .resizable()
                 .frame(width: 25, height: 25)
             Text("例）東京のバー")
+                .font(.system(size: 18))
             Spacer()
         }
         .foregroundColor(.gray)
@@ -123,8 +130,11 @@ private extension ContentView {
     var whoTextField: some View {
         VStack {
             ZStack {
-                TextField("", text: $viewModel.whoTextInput)
+                TextField("", text: $viewModel.whoTextInput, axis: .vertical)
                     .padding()
+                    .foregroundColor(.smokeBlack)
+                    .accentColor(.mainBackground)
+                    .font(.system(size: 18))
                     .frame(height: 60, alignment: .top)
                     .background(Color.smokeWhite)
                     .cornerRadius(30)
@@ -150,6 +160,7 @@ private extension ContentView {
                 .resizable()
                 .frame(width: 25, height: 25)
             Text("例）仲のいい友達")
+                .font(.system(size: 18))
             Spacer()
         }
         .foregroundColor(.gray)
@@ -161,7 +172,7 @@ private extension ContentView {
         Button(action: {
             viewModel.generateThemes()
         }) {
-            Text("話す時に良いテーマは？")
+            Text("話すときのテーマは？")
                 .foregroundColor(.smokeWhite)
                 .bold()
                 .font(.title3)

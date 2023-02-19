@@ -14,6 +14,7 @@ struct ContentView: View {
     @FocusState private var isFocusedWho: Bool
     @State private var isShowingResult = false
     @State private var isShowingAppInfoScreen = false
+    @State private var isShowingAlert = true
 
     var body: some View {
         NavigationView {
@@ -229,6 +230,13 @@ private extension ContentView {
                 .cornerRadius(30)
         }
         .shadow(color: .smokeBlack, radius: 2, x: 0, y: 2)
+        .alert("エラー", isPresented: $isShowingAlert) {
+            Button("OK") {
+                // 了解ボタンが押された時の処理
+            }
+        } message: {
+            Text(viewModel.errorMessage ?? "")
+        }
     }
 
     var appInfoButton: some View {

@@ -9,6 +9,7 @@ import Foundation
 
 final class ThemeResultViewModel: ObservableObject {
     @Published var result: String?
+    @Published var errorMessage: String?
     @Published var whenTextInput = ""
     @Published var whereTextInput = ""
     @Published var whoTextInput = ""
@@ -38,7 +39,7 @@ final class ThemeResultViewModel: ObservableObject {
             case let .failure(error):
                 DispatchQueue.main.async {
                     self.loading = false
-                    self.result = error.localizedDescription
+                    self.errorMessage = error.localizedDescription
                 }
             }
         }

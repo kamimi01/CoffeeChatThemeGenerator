@@ -15,18 +15,31 @@ struct ThemeResultScreen: View {
             Color.mainBackground
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("こんなテーマで話しましょう")
-                        .font(.title)
-                        .foregroundColor(.smokeWhite)
-                        .bold()
-                    Text(theme)
-                        .font(.title2)
-                        .foregroundColor(.smokeWhite)
-                    Spacer()
-                    shareButton
+                ZStack {
+                    VStack {
+                        Spacer()
+                            .frame(height: 220)
+                        Color.smokeWhite
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                    VStack(spacing: 0) {
+                        LottieView(animationType: .friends)
+                            .frame(height: 240)
+                        VStack(alignment: .leading, spacing: 20) {
+                            Text("こんなテーマはいかがですか？")
+                                .font(.title)
+                                .foregroundColor(.smokeBlack)
+                                .bold()
+                            Text(theme)
+                                .font(.title2)
+                                .foregroundColor(.smokeBlack)
+                            Spacer()
+                            shareButton
+                        }
+                    }
+                    .padding(.horizontal, 30)
+                    .padding(.vertical, 40)
                 }
-                .padding(.horizontal, 16)
             }
         }
     }

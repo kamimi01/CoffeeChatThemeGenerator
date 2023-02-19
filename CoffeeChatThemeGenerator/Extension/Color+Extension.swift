@@ -11,4 +11,5 @@ extension Color {
     static let mainBackground = Color("main_background")
     static let smokeWhite = Color("smoke_white")
     static let smokeBlack = Color("smoke_black")
+    static let placeholder = Color("placeholder")
 }

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject private var viewModel = ThemeResultViewModel()
+    @FocusState private var isFocusedWhen: Bool
+    @FocusState private var isFocusedWhere: Bool
+    @FocusState private var isFocusedWho: Bool
 
     var body: some View {
         ZStack {
@@ -31,41 +34,108 @@ struct ContentView: View {
 private extension ContentView {
     var whenTextField: some View {
         VStack {
-            TextField("夜", text: $viewModel.whenTextInput)
-                .padding()
-                .frame(height: 50, alignment: .top)
-                .background(Color.smokeWhite)
-                .cornerRadius(20)
+            ZStack {
+                TextField("", text: $viewModel.whenTextInput)
+                    .padding()
+                    .frame(height: 60, alignment: .top)
+                    .background(Color.smokeWhite)
+                    .cornerRadius(30)
+                    .focused($isFocusedWhen)
+                    .onTapGesture {
+                        isFocusedWhen = true
+                    }
+                if viewModel.whenTextInput.isEmpty {
+                    whenTextFieldPlaceHolder
+                }
+            }
             Text("に")
-                .font(.title)
+                .font(.title2)
                 .foregroundColor(.smokeWhite)
         }
+    }
+
+    var whenTextFieldPlaceHolder: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "timer")
+                .resizable()
+                .frame(width: 25, height: 25)
+            Text("例）夜")
+            Spacer()
+        }
+        .foregroundColor(.gray)
+        .padding()
+        .padding([.leading], 5)
     }
 
     var whereTextField: some View {
         VStack {
-            TextField("東京のバー", text: $viewModel.whereTextInput)
-                .padding()
-                .frame(height: 50, alignment: .top)
-                .background(Color.smokeWhite)
-                .cornerRadius(20)
+            ZStack {
+                TextField("", text: $viewModel.whereTextInput)
+                    .padding()
+                    .frame(height: 60, alignment: .top)
+                    .background(Color.smokeWhite)
+                    .cornerRadius(30)
+                    .focused($isFocusedWhere)
+                    .onTapGesture {
+                        isFocusedWhere = true
+                    }
+                if viewModel.whereTextInput.isEmpty {
+                    whereTextFieldPlaceHolder
+                }
+            }
             Text("で")
-                .font(.title)
+                .font(.title2)
                 .foregroundColor(.smokeWhite)
         }
     }
 
+    var whereTextFieldPlaceHolder: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "location.north.fill")
+                .resizable()
+                .frame(width: 25, height: 25)
+            Text("例）東京のバー")
+            Spacer()
+        }
+        .foregroundColor(.gray)
+        .padding()
+        .padding([.leading], 5)
+    }
+
     var whoTextField: some View {
         VStack {
-            TextField("仲のいい友人", text: $viewModel.whoTextInput)
-                .padding()
-                .frame(height: 50, alignment: .top)
-                .background(Color.smokeWhite)
-                .cornerRadius(20)
+            ZStack {
+                TextField("", text: $viewModel.whoTextInput)
+                    .padding()
+                    .frame(height: 60, alignment: .top)
+                    .background(Color.smokeWhite)
+                    .cornerRadius(30)
+                    .focused($isFocusedWho)
+                    .onTapGesture {
+                        isFocusedWho = true
+                    }
+                if viewModel.whoTextInput.isEmpty
+                {
+                    whoTextFieldPlaceHolder
+                }
+            }
             Text("と")
-                .font(.title)
+                .font(.title2)
                 .foregroundColor(.smokeWhite)
         }
+    }
+
+    var whoTextFieldPlaceHolder: some View {
+        HStack(spacing: 10) {
+            Image(systemName: "person")
+                .resizable()
+                .frame(width: 25, height: 25)
+            Text("例）仲のいい友達")
+            Spacer()
+        }
+        .foregroundColor(.gray)
+        .padding()
+        .padding([.leading], 5)
     }
 
     var submitButton: some View {
@@ -73,15 +143,16 @@ private extension ContentView {
             viewModel.generateThemes()
         }) {
             Text("話す時にベストなテーマは？")
-                .foregroundColor(.smokeBlack)
+                .foregroundColor(.smokeWhite)
                 .bold()
                 .font(.title3)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .frame(height: 50, alignment: .top)
-                .background(Color.smokeWhite)
-                .cornerRadius(20)
+                .frame(height: 60, alignment: .top)
+                .background(Color.mainBackground)
+                .cornerRadius(30)
         }
+        .shadow(color: .gray, radius: 2, x: 0, y: 3)
     }
 }
 

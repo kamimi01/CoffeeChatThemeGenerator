@@ -20,7 +20,7 @@ struct SettingScreen: View {
                     cellTitles: CellTitles(termsOfUse: "利用規約・プライバシーポリシー")
                 ),
                 info: AppInfo(
-                    termOfUseURL: URL(string: "https://kamimi01.github.io/MeetupReminder/privacy_policy/ja.html")!,
+                    termOfUseURL: URL(string: "https://kamimi01.github.io/CoffeeChatThemeGenerator/privacy_policy/ja.html")!,
                     developerInfoURL: URL(string: "https://twitter.com/kamimi_01")!
                 ),
                 licenseFileURL: Bundle.main.url(forResource: "license-list", withExtension: "plist")!

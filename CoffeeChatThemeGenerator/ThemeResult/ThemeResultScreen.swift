@@ -62,7 +62,7 @@ private extension ThemeResultScreen {
     }
 
     var sharedText: String {
-        return "話したいことは、\n\(theme)\n\ncreated by テーマジェネレーター"
+        return "話したいことは、\n\(theme)\n\ncreated by TopicGen"
     }
 }
 

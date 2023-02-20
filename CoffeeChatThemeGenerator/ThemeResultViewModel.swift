@@ -25,7 +25,7 @@ final class ThemeResultViewModel: ObservableObject {
             let whenPrompt = whenTextInput.isEmpty ? "" : "\(whenTextInput)に、"
             let wherePrompt = whereTextInput.isEmpty ? "" : "\(whereTextInput)で、"
             let whoPrompt = whoTextInput.isEmpty ? "" : "\(whoTextInput)と、"
-            return "\(whenPrompt)\(wherePrompt)\(whoPrompt)雑談をする時に最適なテーマを1つ教えてください。できるだけ詳しくお願いします。"
+            return "\(whenPrompt)\(wherePrompt)\(whoPrompt)雑談をする時に最適なテーマを1つ教えてください。できるだけ詳しくお願いします。公序良俗に則った回答をしてください。"
         }
         request.postCompletion = PostCompletion(prompt: prompt)
 

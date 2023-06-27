@@ -33,6 +33,9 @@
 		D41ED50A29A1E0C000EC648C /* ThemeResultScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED50929A1E0C000EC648C /* ThemeResultScreen.swift */; };
 		D41ED50D29A1F3AB00EC648C /* SettingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */; };
 		D41ED50F29A1F51300EC648C /* license-list.plist in Resources */ = {isa = PBXBuildFile; fileRef = D41ED50E29A1F51300EC648C /* license-list.plist */; };
+		D4647E882A4BA2E700F8358A /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D4647E872A4BA2E700F8358A /* OpenAPIRuntime */; };
+		D4647E8B2A4BA2F900F8358A /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = D4647E8A2A4BA2F900F8358A /* OpenAPIURLSession */; };
+		D4647E8D2A4BA3B600F8358A /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D4647E8C2A4BA3B600F8358A /* openapi.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,7 @@
 		D41ED50929A1E0C000EC648C /* ThemeResultScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeResultScreen.swift; sourceTree = "<group>"; };
 		D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		D41ED50E29A1F51300EC648C /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
+		D4647E8C2A4BA3B600F8358A /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4647E8B2A4BA2F900F8358A /* OpenAPIURLSession in Frameworks */,
 				D41ED4E5299B136600EC648C /* AppInfoList in Frameworks */,
+				D4647E882A4BA2E700F8358A /* OpenAPIRuntime in Frameworks */,
 				D41ED50729A1D50500EC648C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +139,7 @@
 		D41ED4B8299B128700EC648C /* CoffeeChatThemeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				D4647E8C2A4BA3B600F8358A /* openapi.yaml */,
 				D41ED50B29A1F39F00EC648C /* Setting */,
 				D41ED50829A1E0AC00EC648C /* ThemeResult */,
 				D41ED4FE299DA9AF00EC648C /* Extension */,
@@ -242,6 +249,8 @@
 			packageProductDependencies = (
 				D41ED4E4299B136600EC648C /* AppInfoList */,
 				D41ED50629A1D50500EC648C /* Lottie */,
+				D4647E872A4BA2E700F8358A /* OpenAPIRuntime */,
+				D4647E8A2A4BA2F900F8358A /* OpenAPIURLSession */,
 			);
 			productName = CoffeeChatThemeGenerator;
 			productReference = D41ED4B6299B128700EC648C /* CoffeeChatThemeGenerator.app */;
@@ -318,6 +327,9 @@
 			packageReferences = (
 				D41ED4E3299B136600EC648C /* XCRemoteSwiftPackageReference "AppInfoList" */,
 				D41ED50529A1D50500EC648C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D4647E852A4BA2CF00F8358A /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				D4647E862A4BA2E700F8358A /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				D4647E892A4BA2F900F8358A /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
 			);
 			productRefGroup = D41ED4B7299B128700EC648C /* Products */;
 			projectDirPath = "";
@@ -337,6 +349,7 @@
 			files = (
 				D41ED50F29A1F51300EC648C /* license-list.plist in Resources */,
 				D41ED4C1299B128A00EC648C /* Preview Assets.xcassets in Resources */,
+				D4647E8D2A4BA3B600F8358A /* openapi.yaml in Resources */,
 				D41ED4BE299B128A00EC648C /* Assets.xcassets in Resources */,
 				D41ED50229A1D47400EC648C /* friends.json in Resources */,
 			);
@@ -747,6 +760,30 @@
 				minimumVersion = 4.1.3;
 			};
 		};
+		D4647E852A4BA2CF00F8358A /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+		D4647E862A4BA2E700F8358A /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+		D4647E892A4BA2F900F8358A /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -759,6 +796,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D41ED50529A1D50500EC648C /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		D4647E872A4BA2E700F8358A /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4647E862A4BA2E700F8358A /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		D4647E8A2A4BA2F900F8358A /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4647E892A4BA2F900F8358A /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

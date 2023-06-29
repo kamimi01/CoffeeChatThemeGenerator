@@ -244,6 +244,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D4647E8F2A4D038100F8358A /* PBXTargetDependency */,
 			);
 			name = CoffeeChatThemeGenerator;
 			packageProductDependencies = (
@@ -446,6 +447,10 @@
 			isa = PBXTargetDependency;
 			target = D41ED4B5299B128700EC648C /* CoffeeChatThemeGenerator */;
 			targetProxy = D41ED4D1299B128B00EC648C /* PBXContainerItemProxy */;
+		};
+		D4647E8F2A4D038100F8358A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D4647E8E2A4D038100F8358A /* OpenAPIGenerator */;
 		};
 /* End PBXTargetDependency section */
 
@@ -806,6 +811,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D4647E892A4BA2F900F8358A /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
 			productName = OpenAPIURLSession;
+		};
+		D4647E8E2A4D038100F8358A /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4647E852A4BA2CF00F8358A /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

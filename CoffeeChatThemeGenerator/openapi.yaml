@@ -1,5 +1,77 @@
-openapi: 3.0.0
+openapi: 3.0.3
 info:
-  title: "API"
+  title: "OpenAI API"
   version: "1.0.0"
-paths: {}
+servers:
+  - url: https://api.openai.com/v1
+tags:
+  - name: completions
+    description: 補完
+paths:
+  /completions:
+    post:
+      tags:
+        - completions
+      summary: 補完
+      operationId: completions
+      requestBody:
+        description: 補完結果の調整パラメータ
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Completions"
+        required: true
+      responses:
+        "200":
+          description: 成功
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResponseCompletions"
+
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: api_key
+      in: header
+  schemas:
+    Completions:
+      type: object
+      properties:
+        model:
+          type: string
+          example: text-davinci-003
+        prompt:
+          type: string
+        temperature:
+          type: number
+          format: double
+          example: 0.8
+        max_tokens:
+          type: integer
+          example: 200
+        top_p:
+          type: number
+          format: double
+          example: 1.0
+        frequency_penalty:
+          type: number
+          format: double
+          example: 0.0
+        presence_penalty:
+          type: number
+          format: double
+          example: 1.0
+    
+    ResponseCompletions:
+      type: object
+      properties:
+        choices:
+          type: object
+          $ref: "#/components/schemas/Choices"
+    Choices:
+      type: object
+      properties:
+        text:
+          type: string

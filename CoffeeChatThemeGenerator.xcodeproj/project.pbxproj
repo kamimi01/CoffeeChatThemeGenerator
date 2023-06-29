@@ -36,6 +36,7 @@
 		D4647E882A4BA2E700F8358A /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = D4647E872A4BA2E700F8358A /* OpenAPIRuntime */; };
 		D4647E8B2A4BA2F900F8358A /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = D4647E8A2A4BA2F900F8358A /* OpenAPIURLSession */; };
 		D4647E8D2A4BA3B600F8358A /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D4647E8C2A4BA3B600F8358A /* openapi.yaml */; };
+		D4647E912A4D043D00F8358A /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D4647E902A4D043D00F8358A /* openapi-generator-config.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingScreen.swift; sourceTree = "<group>"; };
 		D41ED50E29A1F51300EC648C /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
 		D4647E8C2A4BA3B600F8358A /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		D4647E902A4D043D00F8358A /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D4647E8C2A4BA3B600F8358A /* openapi.yaml */,
+				D4647E902A4D043D00F8358A /* openapi-generator-config.yaml */,
 				D41ED50B29A1F39F00EC648C /* Setting */,
 				D41ED50829A1E0AC00EC648C /* ThemeResult */,
 				D41ED4FE299DA9AF00EC648C /* Extension */,
@@ -353,6 +356,7 @@
 				D4647E8D2A4BA3B600F8358A /* openapi.yaml in Resources */,
 				D41ED4BE299B128A00EC648C /* Assets.xcassets in Resources */,
 				D41ED50229A1D47400EC648C /* friends.json in Resources */,
+				D4647E912A4D043D00F8358A /* openapi-generator-config.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

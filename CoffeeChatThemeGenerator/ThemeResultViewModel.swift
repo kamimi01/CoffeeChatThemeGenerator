@@ -19,35 +19,41 @@ final class ThemeResultViewModel: ObservableObject {
     func generateThemes() {
         loading = true
 
-        let client = OpenAIClient()
-        var request = OpenAIAPI.TextCompletion()
         var prompt: String {
             let whenPrompt = whenTextInput.isEmpty ? "" : "\(whenTextInput)に、"
             let wherePrompt = whereTextInput.isEmpty ? "" : "\(whereTextInput)で、"
             let whoPrompt = whoTextInput.isEmpty ? "" : "\(whoTextInput)と、"
             return "\(whenPrompt)\(wherePrompt)\(whoPrompt)雑談をする時に最適なテーマを1つ教えてください。できるだけ詳しくお願いします。公序良俗に則った回答をしてください。"
         }
-        request.postCompletion = PostCompletion(prompt: prompt)
 
-        client.send(request: request) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case let .success(response):
-                DispatchQueue.main.async {
-                    self.loading = false
-                    self.result = self.modifyThemeText(response.choices.first?.text)
-                }
-            case let .failure(error):
-                DispatchQueue.main.async {
-                    self.loading = false
-                    switch error {
-                    case .connectionError(_):
-                        self.errorMessage = "ネットワーク接続に問題があります。"
-                    case .responseParseError(_):
-                        self.errorMessage = "予期しないエラーが発生しました"
-                    case .apiError(let error):
-                        self.errorMessage = error.error.message
+        let client = OpenAIClient()
+        let body = Components.Schemas.Completions(
+            model: "text-davinci-003",
+            prompt: prompt,
+            temperature: 0.8,
+            max_tokens: 200,
+            top_p: 1,
+            frequency_penalty: 0.0,
+            presence_penalty: 1.0
+        )
+
+        Task {
+            let response = try await client.textCompletions(body: body)
+            switch response {
+            case let .ok(okResponse):
+                switch okResponse.body {
+                case .json(let json):
+                    print(json.choices?.first?.text)
+                    await MainActor.run {
+                        self.loading = false
+                        self.result = self.modifyThemeText(json.choices?.first?.text)
                     }
+                }
+            case .undocumented(statusCode: let statusCode, let payload):
+                print("undocumented: \(statusCode)\n \(payload)")
+                await MainActor.run {
+                    self.loading = false
+                    self.errorMessage = "予期しないエラーが発生しました"
                     self.isShowingAlert = true
                 }
             }

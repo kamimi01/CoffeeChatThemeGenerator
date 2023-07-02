@@ -6,37 +6,24 @@
 //
 
 import Foundation
+import OpenAPIRuntime
+import OpenAPIURLSession
 
 final class OpenAIClient {
-    private let session: URLSession = {
-        let configuration = URLSessionConfiguration.default
-        let session = URLSession(configuration: configuration)
-        return session
-    }()
+    private let client: Client
 
-    func send<Request: OpenAIRequest>(
-        request: Request,
-        completion: @escaping (Result<Request.Response, OpenAIClientError>) -> Void
-    ){
-        let urlRequest = request.buildURLRequest()
+    init() {
+        self.client = Client(
+            serverURL: try! Servers.server1(),
+            transport: URLSessionTransport(),
+            middlewares: [AuthMiddleware(), CurlMiddleware()]
+        )
+    }
 
-        let task = session.dataTask(with: urlRequest) { data, response, error in
-            switch (data, response, error) {
-            case (_, _, let error?):
-                completion(.failure(.connectionError(error)))
-            case (let data?, let response?, _):
-                do {
-                    let response = try request.response(from: data, urlResponse: response)
-                    completion(.success(response))
-                } catch let error as OpenAIAPIError {
-                    completion(.failure(.apiError(error)))
-                } catch {
-                    completion(.failure(.responseParseError(error)))
-                }
-            default:
-                fatalError("invalid response combination: \(data), \(response), \(error)")
-            }
-        }
-        task.resume()
+    func textCompletions(body: Components.Schemas.Completions) async throws -> Operations.completions.Output {
+        let response = try await client.completions(Operations.completions.Input(
+            body: .json(body)
+        ))
+        return response
     }
 }

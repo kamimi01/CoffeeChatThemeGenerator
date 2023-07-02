@@ -15,13 +15,8 @@
 		D41ED4D5299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */; };
 		D41ED4D7299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */; };
 		D41ED4E5299B136600EC648C /* AppInfoList in Frameworks */ = {isa = PBXBuildFile; productRef = D41ED4E4299B136600EC648C /* AppInfoList */; };
-		D41ED4E8299C42B000EC648C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4E7299C42B000EC648C /* HTTPMethod.swift */; };
-		D41ED4EA299C42DF00EC648C /* OpenAIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */; };
-		D41ED4EC299C439400EC648C /* OpenAIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4EB299C439400EC648C /* OpenAIClientError.swift */; };
-		D41ED4EE299C43C900EC648C /* OpenAIAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */; };
 		D41ED4F1299C447200EC648C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F0299C447200EC648C /* Theme.swift */; };
 		D41ED4F3299C44CC00EC648C /* OpenAIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */; };
-		D41ED4F5299C63C400EC648C /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */; };
 		D41ED4F7299CE77500EC648C /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F6299CE77500EC648C /* Secret.swift */; };
 		D41ED4F9299CE95F00EC648C /* PostCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4F8299CE95F00EC648C /* PostCompletion.swift */; };
 		D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */; };
@@ -37,6 +32,8 @@
 		D4647E8B2A4BA2F900F8358A /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = D4647E8A2A4BA2F900F8358A /* OpenAPIURLSession */; };
 		D4647E912A4D043D00F8358A /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D4647E902A4D043D00F8358A /* openapi-generator-config.yaml */; };
 		D4647E942A4E3A7700F8358A /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = D4647E932A4E3A7700F8358A /* openapi.yaml */; };
+		D49266852A5148A800945F6C /* AuthMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49266842A5148A800945F6C /* AuthMiddleware.swift */; };
+		D49266872A5148E000945F6C /* CurlMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49266862A5148E000945F6C /* CurlMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +64,8 @@
 		D41ED4D0299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeChatThemeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41ED4D4299B128B00EC648C /* CoffeeChatThemeGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITests.swift; sourceTree = "<group>"; };
 		D41ED4D6299B128B00EC648C /* CoffeeChatThemeGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeChatThemeGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D41ED4E7299C42B000EC648C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIRequest.swift; sourceTree = "<group>"; };
-		D41ED4EB299C439400EC648C /* OpenAIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClientError.swift; sourceTree = "<group>"; };
-		D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPIError.swift; sourceTree = "<group>"; };
 		D41ED4F0299C447200EC648C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIClient.swift; sourceTree = "<group>"; };
-		D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 		D41ED4F6299CE77500EC648C /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		D41ED4F8299CE95F00EC648C /* PostCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCompletion.swift; sourceTree = "<group>"; };
 		D41ED4FA299CECBC00EC648C /* CompletionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResponse.swift; sourceTree = "<group>"; };
@@ -86,6 +78,8 @@
 		D41ED50E29A1F51300EC648C /* license-list.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "license-list.plist"; sourceTree = "<group>"; };
 		D4647E902A4D043D00F8358A /* openapi-generator-config.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		D4647E932A4E3A7700F8358A /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = openapi.yaml; path = docs/spec/openapi.yaml; sourceTree = SOURCE_ROOT; };
+		D49266842A5148A800945F6C /* AuthMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMiddleware.swift; sourceTree = "<group>"; };
+		D49266862A5148E000945F6C /* CurlMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurlMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +182,8 @@
 		D41ED4E6299C429D00EC648C /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				D41ED4E7299C42B000EC648C /* HTTPMethod.swift */,
-				D41ED4E9299C42DF00EC648C /* OpenAIRequest.swift */,
-				D41ED4EB299C439400EC648C /* OpenAIClientError.swift */,
-				D41ED4ED299C43C900EC648C /* OpenAIAPIError.swift */,
+				D49266832A51489600945F6C /* Middlewares */,
 				D41ED4F2299C44CC00EC648C /* OpenAIClient.swift */,
-				D41ED4F4299C63C400EC648C /* OpenAIAPI.swift */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -230,6 +220,15 @@
 				D41ED50C29A1F3AB00EC648C /* SettingScreen.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		D49266832A51489600945F6C /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				D49266842A5148A800945F6C /* AuthMiddleware.swift */,
+				D49266862A5148E000945F6C /* CurlMiddleware.swift */,
+			);
+			path = Middlewares;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,20 +402,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41ED500299DA9BC00EC648C /* Color+Extension.swift in Sources */,
+				D49266872A5148E000945F6C /* CurlMiddleware.swift in Sources */,
 				D41ED4FB299CECBC00EC648C /* CompletionResponse.swift in Sources */,
 				D41ED50429A1D4A700EC648C /* LottieView.swift in Sources */,
 				D41ED4F3299C44CC00EC648C /* OpenAIClient.swift in Sources */,
 				D41ED50A29A1E0C000EC648C /* ThemeResultScreen.swift in Sources */,
+				D49266852A5148A800945F6C /* AuthMiddleware.swift in Sources */,
 				D41ED4F7299CE77500EC648C /* Secret.swift in Sources */,
-				D41ED4F5299C63C400EC648C /* OpenAIAPI.swift in Sources */,
 				D41ED4BC299B128700EC648C /* ContentView.swift in Sources */,
 				D41ED50D29A1F3AB00EC648C /* SettingScreen.swift in Sources */,
-				D41ED4EE299C43C900EC648C /* OpenAIAPIError.swift in Sources */,
 				D41ED4BA299B128700EC648C /* CoffeeChatThemeGeneratorApp.swift in Sources */,
-				D41ED4E8299C42B000EC648C /* HTTPMethod.swift in Sources */,
 				D41ED4F9299CE95F00EC648C /* PostCompletion.swift in Sources */,
-				D41ED4EA299C42DF00EC648C /* OpenAIRequest.swift in Sources */,
-				D41ED4EC299C439400EC648C /* OpenAIClientError.swift in Sources */,
 				D41ED4F1299C447200EC648C /* Theme.swift in Sources */,
 				D41ED4FD299CEDEA00EC648C /* ThemeResultViewModel.swift in Sources */,
 			);

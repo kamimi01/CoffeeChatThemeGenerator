@@ -71,7 +71,9 @@ components:
           type: object
           $ref: "#/components/schemas/Choices"
     Choices:
-      type: object
-      properties:
-        text:
-          type: string
+      type: array
+      items:
+        type: object
+        properties:
+          text:
+            type: string
